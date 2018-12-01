@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% block body %}
+    <div class = "container">
+      <img src="{{ user.userprofile.imagine.url }}" width="240"/>
+        <p>Nume: {{ user.last_name }}</p>
+        <p>Prenume: {{ user.first_name }}</p>
+        <p>Numar de telefon: 0{{ user.userprofile.numar_telefon }}</p>
+        <p>Cont instagram: {{ user.userprofile.cont_instagram }}</p>
+        <p>Cont facebook: {{ user.userprofile.cont_facebook }}</p>
+        <p>Descriere: {{ user.userprofile.descriere }}</p>
+    </div>
+    {% endblock %}
+  </body>
+</html>
